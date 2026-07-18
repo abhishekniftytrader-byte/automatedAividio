@@ -13,6 +13,8 @@ social media accounts (including TikTok).
    processed, or published.
 3. **Acceptable use.** The tool is used in compliance with the terms of
    service of the platforms it publishes to (TikTok, YouTube, Instagram).
+   This application uses YouTube API Services; users of the tool agree to
+   be bound by the [YouTube Terms of Service](https://www.youtube.com/t/terms).
 4. **No warranty.** The tool is provided as-is for personal use, without
    warranty of any kind.
 5. **Contact.** Questions: withabhishekgupta@gmail.com
