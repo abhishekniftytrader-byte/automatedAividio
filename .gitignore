@@ -1,0 +1,16 @@
+# SECRETS — never commit
+.env
+client_secret.json
+token.json
+channels/*/token.json
+channels/ig_*.json
+channels/*/.oauth_verifier
+.oauth_verifier
+
+# big/generated
+workspace/
+output/
+logs/
+repos/
+.venv/
+__pycache__/
