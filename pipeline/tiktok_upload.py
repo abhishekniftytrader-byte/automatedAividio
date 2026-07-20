@@ -16,14 +16,18 @@ ROOT = Path(__file__).resolve().parent.parent
 load_dotenv(ROOT / ".env")
 TOKEN_FILE = ROOT / "channels" / "tiktok.json"
 API = "https://open.tiktokapis.com/v2"
+# ponytail: sandbox toggle via env var, matches tt_auth.py — swap back after TikTok approval
+_SANDBOX = os.environ.get("TIKTOK_USE_SANDBOX") == "1"
+_KEY_VAR = "TIKTOK_SANDBOX_KEY" if _SANDBOX else "TIKTOK_CLIENT_KEY"
+_SECRET_VAR = "TIKTOK_SANDBOX_SECRET" if _SANDBOX else "TIKTOK_CLIENT_SECRET"
 
 
 def access_token():
     tok = json.loads(TOKEN_FILE.read_text())
     # ponytail: always refresh instead of tracking expiry — 1 extra call/day, zero clock logic
     r = requests.post(f"{API}/oauth/token/", data={
-        "client_key": os.environ["TIKTOK_CLIENT_KEY"],
-        "client_secret": os.environ["TIKTOK_CLIENT_SECRET"],
+        "client_key": os.environ[_KEY_VAR],
+        "client_secret": os.environ[_SECRET_VAR],
         "grant_type": "refresh_token",
         "refresh_token": tok["refresh_token"]}, timeout=30)
     r.raise_for_status()
