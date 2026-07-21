@@ -17,7 +17,7 @@
 ## Phase 3 — Cadence
 - [x] Cron automation ON (2026-07-18): daily 09:00 IST trader, 09:40 IST animal, private mode, logs/ per channel
 - [ ] Track retention/subs; 90-day kill-criteria clock starts at first public upload
-- [ ] YouTube API audit: submitted 2026-07-18, reviewer active 2026-07-19 (thread: youtube-disputes@google.com); approval unlocks public uploads
+- [ ] YouTube API audit: submitted 2026-07-18, reviewer active 2026-07-19; reviewer requested screencast + channel links 2026-07-21, replied same day (screen recording + both channel URLs attached, 15MB); approval unlocks public uploads
 
 ## Phase 4 — Multi-platform + scale
 - [x] Instagram Reels auto-publish (2026-07-18, @ai_trendingshort)
